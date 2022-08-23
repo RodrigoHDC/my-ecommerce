@@ -39,10 +39,10 @@ const CartProvider = ( props ) => {
         const db = getFirestore();
         const orderCollection = collection(db, "orders");
         const order = {
-            buyerData,
+            // user: buyerData,
             items: cart,
-            fecha,
-            total
+            date: fecha,
+            total: total,
         };
 
         addDoc(orderCollection, order)

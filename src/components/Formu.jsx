@@ -215,14 +215,14 @@ const Form = () => {
         }
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const inputs = document.getElementsByTagName("input");
-        const data = Array.from(inputs).map((input) => input.value);
-        const total = totalPrice
-        sendOrder(total, {name: data[0], telefono: data[1], mail: data[2]});
-        navigate("/success");
-        };
+        const handleSubmit = (e) => {
+            e.preventDefault();
+            const inputs = document.getElementsByTagName("input");
+            const data = Array.from(inputs).map((input) => input.value);
+            const total = totalPrice();
+            sendOrder(total, {name: data[0], telefono: data[1], mail: data[2]});
+            navigate("/success");
+            };
 
     return(
         <>
