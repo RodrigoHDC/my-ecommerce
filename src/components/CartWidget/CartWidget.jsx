@@ -1,10 +1,16 @@
-import React from 'react';
+import React from "react";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
-export const CartWidget = () => {
+const CartWidget = () => {
+    const {itemCount} = useContext(CartContext);
+
     return ( 
-        <i className="bi bi-cart-check-fill"></i>
-     );
-
+        <>
+        <ion-icon name="cart"></ion-icon>
+        <span>{itemCount || ''}</span>
+        </>  
+    );
 }
  
 export default CartWidget;
