@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import { CartContext } from "../../context/CartContext";
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 const ItemDetail = ({ item }) => {
   const [goToCart, setGoToCart] = useState(false);
@@ -46,7 +47,7 @@ const ItemDetail = ({ item }) => {
 
           <div>
             {
-              goToCart ? <Link to='/cart'>Terminar Compra!</Link> : <ItemCount key={id} stock={stock} initial={0} onAdd={onAdd} />
+              goToCart ? <Link to='/cart' className="boton"><Button variant="primary">Finalizar Compra!</Button></Link> : <ItemCount key={id} stock={stock} initial={0} onAdd={onAdd} />
             }
           </div>
         </Col>

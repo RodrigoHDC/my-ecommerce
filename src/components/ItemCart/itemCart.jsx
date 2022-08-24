@@ -2,6 +2,7 @@ import React from "react";
 import { CartContext } from "../../context/CartContext";
 import Table from 'react-bootstrap/Table';
 import { useContext } from "react";
+import Button from 'react-bootstrap/Button';
 
 const ItemCart = ({ item }) => {
     const { removeProduct } = useContext(CartContext);
@@ -20,12 +21,12 @@ const ItemCart = ({ item }) => {
 
 
 return (
-    <div className="w-75 mx-auto my-auto"> 
+    <div className="d-flex w-50 mx-auto my-auto"> 
     <Table striped>
       <tbody>
         <tr>
           <th>
-          <img src={item.img} alt={item.title} width="30%" />
+          <img src={item.img} alt={item.title} width="60%" />
           </th>
 
           <th>
@@ -37,15 +38,15 @@ return (
           </th>
           
           <th>
-          <p>Precio U.: {item.price}</p>
+          <p>Precio: USD {item.price}</p>
           </th>
 
           <th>
-          <p>Sbutotal: ${item.quantity * item.price}</p>
+          <p>Subtotal: USD {item.quantity * item.price}</p>
           </th>
 
           <th>
-          <button onClick={() => removeProduct(item.id)}>Eliminar</button>
+          <Button variant="danger" size="sm" className="text-center mt-4 mb-4" onClick={() => removeProduct(item.id)}>Eliminar</Button>
           </th>
 
           </tr>

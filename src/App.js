@@ -3,7 +3,7 @@ import React from 'react';
 // Importamos las funciones de React-Router-Dom:
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Importamos los componentes creados:
-import NavBar from './components/NavBar/navbar';
+import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/Items/ItemListContainer';
 import ItemDetailContainer from './components/Items/ItemDetailContainer';
 import Cart from './components/Cart/Cart';
@@ -11,6 +11,7 @@ import CartProvider from './context/CartContext';
 // import FormValidation from './components/Form/FormValidation';
 import Form from './components/Formu';
 import Success from './components/Success';
+import Footer from './components/Footer/Footer.jsx';
 
 
 function App() {
@@ -34,8 +35,10 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/form" element={<Form />} />
             <Route path="/success" element={<Success />} />
-            
-        </Routes>
+
+          
+          </Routes>
+          <Footer />
         </CartProvider>
       </BrowserRouter>
     </>

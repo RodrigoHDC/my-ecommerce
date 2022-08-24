@@ -1,0 +1,15 @@
+#menu li > a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3f3f3f;
+}
+
+#menu li > .nav-link.active {
+    font-weight: bold;
+    border-bottom: #314652 solid 2px;
+}
+
+#menu form > button {
+    font-size: 18px;
+    font-weight: bold;
+}

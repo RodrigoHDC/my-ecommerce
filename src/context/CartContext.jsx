@@ -9,9 +9,8 @@ const CartProvider = ( props ) => {
     const [cart, setCart] = React.useState([]);
     const [orderId, setOrderId] = React.useState("");
 
-
     const addProduct = (item, quantity) => {
-        if (isInCart(item.id)) {
+        if (isInCart(item.id)){
             setCart(cart.map(product => {
                 return product.id === item.id ? { ...product, quantity: product.quantity + quantity } : product
             }));
@@ -32,6 +31,7 @@ const CartProvider = ( props ) => {
 
     const removeProduct = (id) => setCart(cart.filter(product => product.id !== id));
 
+
     const sendOrder = (total, buyerData) => {
         const timestamp = Date.now(); 
         const fecha = new Date(timestamp);
@@ -39,7 +39,7 @@ const CartProvider = ( props ) => {
         const db = getFirestore();
         const orderCollection = collection(db, "orders");
         const order = {
-            // user: buyerData,
+            user: buyerData,
             items: cart,
             date: fecha,
             total: total,
