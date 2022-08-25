@@ -42,7 +42,7 @@ export default function Footer() {
       </div>
   
   <div className="col redes">
-    <h2 className="fs-2 mt-5 mb-4 mx-2">Nuestras Redes</h2>
+    <h2 className="redes fs-2 mt-5 mb-4 mx-3">Nuestras Redes</h2>
     <div className="buttons">
       <a href="https://web.whatsapp.com/" className="fa fa-whatsapp"> <BsWhatsapp/> </a> 
       <a href="https://www.instagram.com/importecharg/" className="fa fa-instagram"> <BsInstagram/> </a>

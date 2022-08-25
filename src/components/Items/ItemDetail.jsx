@@ -8,6 +8,7 @@ import { CartContext } from "../../context/CartContext";
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 
+
 const ItemDetail = ({ item }) => {
   const [goToCart, setGoToCart] = useState(false);
   const [amount, setAmount] = useState(0);
@@ -21,12 +22,12 @@ const ItemDetail = ({ item }) => {
   }
 
   return (
-    <>
     <Container>
       <Row>
 
+      <>
         <Col>
-         <Card.Img variant="top mx-auto" src={img} style={{width: "30rem"}} />
+         <Card.Img variant="top mx-auto" src={img} alt={title} style={{width: "30rem"}} />
         </Col>
 
         <Col xs={6}  className='mt-5'>
@@ -36,14 +37,15 @@ const ItemDetail = ({ item }) => {
           <hr />
           <Card.Text>{description}</Card.Text>
           <hr />
-          <Card.Text>{color}</Card.Text>
+          <Card.Text>Color: {color}</Card.Text>
           <hr />
-          <Card.Text>{ROI}</Card.Text>
+          <Card.Text>ROI: {ROI}</Card.Text>
           <hr />
           <Card.Text>USD {price}</Card.Text>
           <hr />
           <Card.Text>Stock Disponible: {stock}</Card.Text>
           <hr />
+
 
           <div>
             {
@@ -51,10 +53,10 @@ const ItemDetail = ({ item }) => {
             }
           </div>
         </Col>
+        </>
 
-      </Row>
-    </Container>
-    </>
+     </Row>
+  </Container>
   );
 }
 

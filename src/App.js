@@ -9,9 +9,9 @@ import ItemDetailContainer from './components/Items/ItemDetailContainer';
 import Cart from './components/Cart/Cart';
 import CartProvider from './context/CartContext';
 // import FormValidation from './components/Form/FormValidation';
-import Form from './components/Formu';
-import Success from './components/Success';
+import Form from './components/Form/Form';
 import Footer from './components/Footer/Footer.jsx';
+import Purchase from './components/Purchase/Purchase';
 
 
 function App() {
@@ -34,9 +34,9 @@ function App() {
           />
             <Route path="/cart" element={<Cart />} />
             <Route path="/form" element={<Form />} />
-            <Route path="/success" element={<Success />} />
+            <Route path="/purchase" element={<Purchase />} />
 
-          
+            
           </Routes>
           <Footer />
         </CartProvider>

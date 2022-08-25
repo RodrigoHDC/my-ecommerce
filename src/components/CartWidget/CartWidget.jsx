@@ -9,7 +9,7 @@ const CartWidget = () => {
 
     return ( 
         <>
-            <div className="d-flex">
+            <div className="d-flex mx-5">
             <Link to={"/cart"}>
             <img src="../IMG/Carrito/cart.png" alt="Logo" width="40px" height="30px"/>
             </Link>

@@ -23,7 +23,7 @@ const NavBar = () => {
           </button>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav mx-auto mb-2 mb-lg-0 fs-5">
               <Nav.Link as={Link} to="/">Inicio</Nav.Link>
               <Nav.Link as={Link} to="/category/Rig">Rigs</Nav.Link>
               <Nav.Link as={Link} to="/category/Placa">Placas de Video</Nav.Link>

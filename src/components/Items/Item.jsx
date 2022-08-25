@@ -19,7 +19,7 @@ const Item = ({ item }) => {
             <>
             <Col className='mt-5'>
             <Card style={{ width: '16rem' }}>
-            <Card.Img variant="top mx-auto" src={img} style={{width: "10rem"}} />
+            <Card.Img variant="top mx-auto" src={img} alt={title} style={{width: "10rem"}} />
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>{description}</Card.Text>

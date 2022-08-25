@@ -2,8 +2,7 @@ import React from "react";
 import { addDoc, collection, getFirestore, updateDoc, doc } from 'firebase/firestore';
 
 export const CartContext = React.createContext();
-// const CartContext = React.createContext([]);
-// export const useCartContext = () => useContext(CartContext);
+
 
 const CartProvider = ( props ) => {
     const [cart, setCart] = React.useState([]);

@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons';
-import { CartContext } from '../context/CartContext';
+import { CartContext } from '../../context/CartContext';
 import { useNavigate } from 'react-router-dom';
 
 const Formulario = styled.form`
@@ -221,7 +221,7 @@ const Form = () => {
             const data = Array.from(inputs).map((input) => input.value);
             const total = totalPrice();
             sendOrder(total, {name: data[0], telefono: data[1], mail: data[2]});
-            navigate("/success");
+            navigate("/Purchase");
             };
 
     return(
